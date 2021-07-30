@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+  <h1>Java Script 변수의 범위</h1>
+
+  <script type="text/javascript">
+			console.log("함수에 var name 했을 때");
+
+			var name = "global";
+
+			function checkscope() {
+				var name = "local";
+				var name2 = "로컬";
+				console.log(name);
+			}
+
+			checkscope(); // local
+			//console.log(name2); => 함수가 끝나면 없어지기 때문에 오류가 난다.
+			console.log(name); // global
+
+			console.log("함수에 name 했을 때");
+
+			var names = "global";
+
+			function checkscope() {
+				names = "local";
+				names2 = "로컬";
+				console.log(names);
+			}
+
+			checkscope(); // local
+			console.log(names); // local
+			console.log(names2); // 로컬
+		</script>
+
+</body>
+
+
+</html>

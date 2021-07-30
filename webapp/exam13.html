@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+  <h1>Java Script 객체</h1>
+
+  <script type="text/javascript">
+			console.log("===== 객체 =====");
+
+			//자바의 GuestbookVo guestbookVo = new GuestbookVo(); 와 비슷하다.
+			var guestbookVo = {
+				name : "홍길동", // 객체에서는 name = "홍길동" 이 아닌  name : "홍길동" 이렇게 표현한다.
+				password : "1234",
+				content : "안녕하세요",
+				showinfo : function() {console.log(this.name + ", " + this.password + ", " + this.content)}
+			};
+
+			console.log(guestbookVo.name);
+			console.log(guestbookVo.password);
+			console.log(guestbookVo.content);
+			guestbookVo.showinfo();
+
+			console.log("===== 객체 배열에 넣기 =====");
+
+			var person01 = {
+				name : "홍길동",
+				hp : "010-1234-1234",
+				company : "02-123-1234"
+			};
+
+			var person02 = {
+				name : "전우치",
+				hp : "010-1111-1111",
+				company : "02-111-1111"
+			};
+
+			var person03 = {
+				name : "손오공",
+				hp : "010-2222-2222",
+				company : "02-222-2222"
+			};
+
+			// 방법 1
+			var personList = [ person01, person02, person03 ];
+
+			console.log(personList);
+
+			// 방법 2
+			var personList02 = [];
+			personList02[0] = person01;
+			personList02[1] = person02;
+
+			console.log(personList02);
+
+			// 방법 3
+			var personList03 = [];
+			personList03.push(person01);
+			personList03.push(person02);
+
+			console.log(personList03);
+
+			// for문으로 출력
+			for (var i = 0; i < personList03.length; i++) {
+				console.log(personList03[i].name);
+				console.log(personList03[i].hp);
+			}
+		</script>
+
+
+</body>
+</html>
