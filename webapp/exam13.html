@@ -23,7 +23,9 @@
 			console.log(guestbookVo.password);
 			console.log(guestbookVo.content);
 			guestbookVo.showinfo();
+			</script>
 
+        <script type="text/javascript">
 			console.log("===== 객체 배열에 넣기 =====");
 
 			var person01 = {
@@ -44,19 +46,19 @@
 				company : "02-222-2222"
 			};
 
-			// 방법 1
+			// 방법 1 (한 번에 넣기)
 			var personList = [ person01, person02, person03 ];
 
 			console.log(personList);
 
-			// 방법 2
+			// 방법 2 (직접 넣기)
 			var personList02 = [];
 			personList02[0] = person01;
 			personList02[1] = person02;
 
 			console.log(personList02);
 
-			// 방법 3
+			// 방법 3 (push로 넣기)
 			var personList03 = [];
 			personList03.push(person01);
 			personList03.push(person02);
