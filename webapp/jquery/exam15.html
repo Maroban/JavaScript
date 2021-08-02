@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+
+  <ul>
+    <li id="first" class="red">첫 번째 아이템입니다.</li>
+    <li id="second" class="blue"><strong>두 번째 아이템입니다.</strong></li>
+    <li id="third" class="del">세 번째아이템입니다.</li>
+    <li><strong>네 번째 아이템입니다.</strong></li>
+
+  </ul>
+  <button id="btn" type="button">li 추가</button>
+</body>
+
+<script type="text/javascript">
+	$("#btn").on("click", function() {
+		$("ul").append("<li id='hi'>다섯 번째 아이템 입니다.</li>");
+		$("ul").append("<li>여섯 번째 아이템 입니다.</li>");
+		$("ul").append("<li>일곱 번째 아이템 입니다.</li>");
+	});
+
+	/*
+		$("ll").on("click", function() {
+		console.log($(this));
+	});
+
+
+	 */
+
+	$("ul").on("click", "li", function() {
+		console.log($(this));
+	});
+</script>
+
+
+
+</html>
